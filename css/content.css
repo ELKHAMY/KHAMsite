@@ -1,0 +1,176 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+  }
+  
+  /* Main container styles */
+  #mainContainer {
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+  }
+  
+  /* Product container styles */
+  #containerClothing, #containerAccessories {
+    display: grid;
+    grid-gap: 70px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+  }
+  
+  /* Product card styles */
+  #box {
+    width: 100%;
+    background-color: #fff;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  #box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-15px);
+  }
+  
+  #box a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #details {
+    padding: 20px;
+    text-transform: capitalize;
+  }
+  
+  #details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+  
+  #details h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    color: #666;
+  }
+  
+  #details h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #03a9f4;
+  }
+  
+  #description {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    transition: right 0.3s ease-in-out;
+  }
+  
+  #description p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  #box:hover #description {
+    right: 0;
+  }
+  section {
+    padding: 50px 100px;
+    box-sizing: border-box;
+  }
+  
+  section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  section p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+  
+  section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #containerClothing, #containerAccessories {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    #containerClothing, #containerAccessories {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #containerClothing, #containerAccessories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    #containerClothing, #containerAccessories {
+      grid-template-columns: 1fr;
+    }
+  
+    #description {
+      right: -100%;
+      width: 100%;
+    }
+  }
